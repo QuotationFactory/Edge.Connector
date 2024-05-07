@@ -1,5 +1,9 @@
 # QF.Agent.Service release notes
 
+## Update 07-05-2024
+* Agent Build version is send to backend to make it visible in the agent settings.
+
+
 ## Update 23-04-2024
 * updates versioned datacontract to version 0.3.51
 * Updates nuget packages to latest versions
