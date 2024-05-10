@@ -4,9 +4,14 @@
 
 Install windows service
 
+STEP 1
 ```Commandbox (run as Administrator!)
 # install service
 sc.exe create QF.Live.Agent start= auto binpath= "[path to]\QF.Agent.Host.exe" displayname= "QF Live connector"
+```
+STEP 2
+```Commandbox (run as Administrator!)
+# configure service
 sc.exe failure QF.Live.Agent reset= 86400 actions= restart/1000/restart/1000/restart/3600
 ```
 # add dependency between services
