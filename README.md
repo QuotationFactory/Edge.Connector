@@ -17,17 +17,25 @@ sc.exe failure QF.Live.Agent reset= 86400 actions= restart/1000/restart/1000/res
 # add dependency between services
 
 ## Dependency on one other service:
-sc config ServiceA depend= ServiceB
+```Commandbox (run as Administrator!)
+sc.exe config ServiceA depend= ServiceB
+```
 Above means that ServiceA will not start until ServiceB has started. If you stop ServiceB, ServiceA will stop automatically.
 ### example
-sc config Beltar.Rhodium24.RidderiQ.Integration depend= QF.Live.Agent
-
+```Commandbox (run as Administrator!)
+sc.exe config Beltar.Rhodium24.RidderiQ.Integration depend= QF.Live.Agent
+```
 ## Dependency on multiple other services:
-sc config ServiceA depend= ServiceB/ServiceC/ServiceD/"Service Name With Spaces"
+```Commandbox (run as Administrator!)
+sc.exe config ServiceA depend= ServiceB/ServiceC/ServiceD/"Service Name With Spaces"
+```
 Above means that ServiceA will not start until ServiceB, ServiceC, and ServiceD have all started. If you stop any of ServiceB, ServiceC, or ServiceD, ServiceA will stop automatically.
 
 ## To remove all dependencies:
-sc config ServiceA depend= /
-
+```Commandbox (run as Administrator!)
+sc.exe config ServiceA depend= /
+```
 ## To list current dependencies:
-sc qc ServiceA
+```Commandbox (run as Administrator!)
+sc.exe qc ServiceA
+```
