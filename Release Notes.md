@@ -1,5 +1,10 @@
 # QF.Agent.Service release notes
 
+## Update 20-06-2024
+* Add updater (first version)
+* Fix possible lock (WaitForCommand > RegisterCommandWaiter and fix blocking issue)
+
+
 ## Update 07-05-2024
 * Agent Build version is send to backend to make it visible in the agent settings.
 
